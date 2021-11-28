@@ -1,11 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {PassgenpartComponent} from "./components/passgenpart/passgenpart.component";
+import {HeaderComponent} from "./components/header/header.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {InfoComponent} from "./components/info/info.component";
+import {AdvantagesComponent} from "./components/advantages/advantages.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        PassgenpartComponent,
+        HeaderComponent,
+        FooterComponent,
+        InfoComponent,
+        AdvantagesComponent,
       ],
     }).compileComponents();
   });
