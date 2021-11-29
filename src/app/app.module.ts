@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
 import { AdvantagesComponent } from './components/advantages/advantages.component';
-import { AboutComponent } from './components/about/about.component';
+import { AboutComponent } from './components/info/about/about.component';
 import { MainSectionComponent } from './components/main-section/main-section.component';
 import { PasswordPartComponent } from './components/password-part/password-part.component';
 import { TextPartComponent } from './components/text-part/text-part.component';
