@@ -1,5 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 
+import { Generator } from "../../system/classes/generator";
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,6 +15,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+  }
+
+  public generatePassword() {
+    console.log(new Generator(true, true, true, true).generatePassword())
   }
 
 
