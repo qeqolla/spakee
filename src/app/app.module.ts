@@ -10,6 +10,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
 import { AdvantagesComponent } from './components/advantages/advantages.component';
 import { AboutComponent } from './components/about/about.component';
+import { MainSectionComponent } from './components/main-section/main-section.component';
+import { PasswordPartComponent } from './components/password-part/password-part.component';
+import { TextPartComponent } from './components/text-part/text-part.component';
+
+import { LoginRegisterComponent } from './components/login-register/login-register.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,11 @@ import { AboutComponent } from './components/about/about.component';
     InfoComponent,
     AdvantagesComponent,
     AboutComponent,
+    MainSectionComponent,
+    PasswordPartComponent,
+    TextPartComponent,
+    LoginRegisterComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

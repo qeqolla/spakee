@@ -22,7 +22,8 @@ export class Generator {
     }
   }
 
-  private random = (num: number): number => Math.floor(crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32 * num) + 1;
+  private random = (num: number): number =>
+    Math.floor(crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32 * num) + 1;
 
   private generateRandomCharSet(): string {
     let charSet = ''
