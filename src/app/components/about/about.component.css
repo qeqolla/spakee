@@ -13,13 +13,11 @@
   word-break: normal;
   color: #fff;
   display: flex;
-  /*display: table-cell;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
   vertical-align: middle;
-  font-size: 18px;
-  margin-left: 110px;
-  margin-top: -46px;
+  font-size: 17px;
+  text-align: center;
+  /*margin-left: 110px;*/
+  /*margin-top: -46px;*/
 }
 
 

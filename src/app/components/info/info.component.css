@@ -1,9 +1,6 @@
 .container {
   width: 100%;
   height: 100vh;
-  /*background: rgb(198, 106, 54);*/
-  /*background: linear-gradient(0deg, rgba(198, 106, 54, 1) 0%, rgba(117, 62, 187, 1) 61%);*/
-  /*background: #000000;*/
   background: url("src/assets/images/bg.png");
 }
 
@@ -12,6 +9,6 @@
   flex-flow: wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 104px 300px 80px 200px;
+  margin: 100px 250px 110px 250px;
 
 }
