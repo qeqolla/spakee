@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoComponent } from './components/info/info.component';
 import { AdvantagesComponent } from './components/advantages/advantages.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AdvantagesComponent } from './components/advantages/advantages.componen
     FooterComponent,
     InfoComponent,
     AdvantagesComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
