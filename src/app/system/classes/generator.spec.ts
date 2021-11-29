@@ -2,6 +2,6 @@ import { Generator } from './generator';
 
 describe('Generator', () => {
   it('should create an instance', () => {
-    expect(new Generator()).toBeTruthy();
+    expect(new Generator(true, true, true, true)).toBeTruthy();
   });
 });
