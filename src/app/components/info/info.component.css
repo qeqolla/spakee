@@ -1,15 +1,17 @@
 .container {
   width: 100%;
   height: 100vh;
-  background: rgb(198, 106, 54);
-  background: linear-gradient(0deg, rgba(198, 106, 54, 1) 0%, rgba(117, 62, 187, 1) 61%);
+  /*background: rgb(198, 106, 54);*/
+  /*background: linear-gradient(0deg, rgba(198, 106, 54, 1) 0%, rgba(117, 62, 187, 1) 61%);*/
   /*background: #000000;*/
+  background: url("src/assets/images/bg.png");
 }
 
 .cards {
   display: flex;
-  justify-content: space-between;
   flex-flow: wrap;
-  width: 100%;
-}
+  justify-content: space-around;
+  align-items: center;
+  margin: 104px 300px 80px 200px;
 
+}
