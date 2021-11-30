@@ -11,7 +11,7 @@ export class InfoComponent implements OnInit {
     ['../../../../assets/images/free.png', 'БЕЗКОШТОВНИЙ функціонал'],
     ['../../../../assets/images/reminder.png', 'Нагадування про періодичну зміну паролю'],
     ['../../../../assets/images/password.png', 'Захищені паролі'],
-    ['../../../../assets/images/synchronization.png', 'Швидка синхронізація ' + ' з усіма  пристроями'],
+    ['../../../../assets/images/synchronization.png', 'Швидка синхронізація з усіма  пристроями'],
     ['../../../../assets/images/setting.png', 'Гнучкі налаштування'],
     ['../../../../assets/images/interface.png', 'Зручний інтерфейс'],
     ['../../../../assets/images/registration.png', 'Необмежена кількість записів'],
