@@ -1,7 +1,11 @@
 <div class="container">
 
-<app-advantages></app-advantages>
-<app-about></app-about>
+  <app-advantages></app-advantages>
+  <div class="cards">
+    <div *ngFor="let key of infoCardDescription.keys()">
+      <app-about [description]="infoCardDescription.get(key)" [imagePath]="key"></app-about>
+    </div>
+  </div>
 
 </div>
 
