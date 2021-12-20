@@ -1,0 +1,6 @@
+.wrapper {
+  padding: 180px 125px;
+  display: flex;
+  justify-content: space-between;
+}
+

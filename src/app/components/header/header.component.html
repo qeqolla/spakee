@@ -1,4 +1,4 @@
-<header class="header" >
+<header class="header" ><!--[routerLink]="['']"-->
   <div class="name" id="top" (click)="toTop()">
     <span class="green">S</span>
     <span class="rest">pakee</span>
@@ -7,11 +7,11 @@
   <div class="login-register-section">
     <div class="wrapper" *ngIf="!isInSystem; else inSystem">
       <div class="login">
-        <span>Вхід</span>
+        <span [routerLink]="['/login']">Вхід</span>
       </div>
-      <div class="register">
+<!--      <div class="register">
         <span>Зареєструватися</span>
-      </div>
+      </div>-->
     </div>
 
     <ng-template #inSystem>

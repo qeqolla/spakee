@@ -28,9 +28,4 @@ export class PassgenpartComponent implements OnInit {
       }, 1000)
     })
   }
-
-  ngAfterViewInit() {
-
-  }
-
 }
