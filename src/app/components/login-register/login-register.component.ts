@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-register.component.css']
 })
 export class LoginRegisterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngOnInit(): void {
+    (<HTMLButtonElement>document.getElementById('signUp')).addEventListener('click', () => {
+      (<HTMLAreaElement>document.getElementById('container')).classList.add('right-panel-active')
+    });
+
+    (<HTMLButtonElement>document.getElementById('signIn')).addEventListener('click', () => {
+      (<HTMLAreaElement>document.getElementById('container')).classList.remove('right-panel-active')
+    });
+  }
 }
