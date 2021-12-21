@@ -7,6 +7,8 @@ interface Parameters {
   symbols: string;
 }
 
+declare let $: any;
+
 @Component({
   selector: 'app-password-part',
   templateUrl: './password-part.component.html',
