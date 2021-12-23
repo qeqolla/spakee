@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+
 import {AppComponent} from './app.component';
 import {PassgenpartComponent} from './components/passgenpart/passgenpart.component';
 import {HeaderComponent} from './components/header/header.component';
@@ -16,6 +17,7 @@ import {AboutComponent} from './components/info/about/about.component'
 
 import {LoginRegisterComponent} from './components/login-register/login-register.component';
 import {MainComponent} from './components/main/main.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {MainComponent} from './components/main/main.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

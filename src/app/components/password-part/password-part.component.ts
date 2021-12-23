@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-
-interface Parameters {
-  isChecked: boolean;
-  expression: RegExp;
-  valid: boolean;
-  symbols: string;
-}
+import {sha1} from "../../system/classes/sha-converter";
+import "js-sha1"
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
+import {IParameters} from "../../system/interfaces/parameters";
 
 declare let $: any;
 
@@ -15,12 +13,14 @@ declare let $: any;
   styleUrls: ['./password-part.component.css'],
 })
 export class PasswordPartComponent implements OnInit {
-  settings: { [id: string]: Parameters } = {};
+  settings: { [id: string]: IParameters } = {};
   passwordLength: number = Math.floor(Math.random() * 15) + 15;
   password!: string;
   generatedPassword!: string;
+  private password_url = environment.PASSWORD_URL
+  private security!: HTMLAreaElement
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.password = '';
     this.generatedPassword = '';
     this.settings['uppercase'] = {
@@ -50,20 +50,41 @@ export class PasswordPartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.security = <HTMLAreaElement>document.querySelector(".security")
+  }
+
+  private parsePwndPasswords(data: string, encryptedPassword: string) {
+    let passwords = data.split(/\s+/)
+
+    let isPwnd = false
+
+    passwords.forEach(password => {
+      if (password.toLowerCase().includes(encryptedPassword.slice(5))) {
+        let pwndCount = password.split(':')[1]
+        isPwnd = true
+        this.security.innerHTML = `<span>Ваш пароль ненадійний. Зустрічається ${pwndCount} разів!</span>`
+      }
+    })
+
+    if (!isPwnd) {
+      this.security.innerHTML = `<span>Ваш пароль надійний!</span>`
+    }
   }
 
   check() {
-    Object.entries(this.settings).forEach(([name, param]) => {
-      if (param.isChecked) {
-        param.valid = param.expression.test(this.password);
-        console.log(this.password)
-      } else {
-        param.valid = true;
-      }
-    });
+    let hashedPassword = sha1(this.password)
+
+    this.security.innerHTML = ''
+
+    this.http.get(`${this.password_url}${hashedPassword.slice(0, 5)}`, {responseType: 'text'})
+      .subscribe(
+        data => this.parsePwndPasswords(data, hashedPassword),
+        error => console.log(error)
+      )
   }
 
   checkGeneratedPassword(pass: string) {
+    this.security.innerHTML = ''
     try {
       Object.entries(this.settings).forEach(([name, param]) => {
         if (param.isChecked) {
@@ -95,7 +116,7 @@ export class PasswordPartComponent implements OnInit {
           Math.floor(Math.random() * charactersLength)
         );
       }
-      console.log(result);
+      // console.log(result);
       validPassword = this.checkGeneratedPassword(result);
       this.generatedPassword = result;
       this.password = result;
