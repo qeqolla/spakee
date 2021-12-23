@@ -6,6 +6,9 @@
 
   <div class="login-register-section">
     <div class="wrapper" *ngIf="!isInSystem; else inSystem">
+      <div class="passwords">
+        <span [routerLink]="['/passwords']">Мої паролі</span>
+      </div>
       <div class="login">
         <span [routerLink]="['/login']">Вхід</span>
       </div>

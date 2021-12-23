@@ -50,10 +50,6 @@
   width: 195px;
 }
 
-.login:hover {
-  cursor: pointer;
-}
-
-.to-accounts:hover {
+.login:hover, .passwords:hover, .to-accounts:hover {
   cursor: pointer;
 }
