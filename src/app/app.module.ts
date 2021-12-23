@@ -17,6 +17,8 @@ import {AboutComponent} from './components/info/about/about.component'
 
 import {LoginRegisterComponent} from './components/login-register/login-register.component';
 import {MainComponent} from './components/main/main.component';
+import { PasswordPageComponent } from './components/password-page/password-page.component';
+import { PasswordFieldComponent } from './components/password-field/password-field.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import {MainComponent} from './components/main/main.component';
     TextPartComponent,
     LoginRegisterComponent,
     MainComponent,
+    PasswordPageComponent,
+    PasswordFieldComponent,
   ],
   imports: [
     BrowserModule,
